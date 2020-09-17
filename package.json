@@ -1,0 +1,72 @@
+{
+	"name": "vscode-snippet-fiori-fundamental-vue",
+	"displayName": "vscode-snippet-fiori-fundamental-vue",
+	"description": "VSCode snippet extension for apps developed with Fiori Fundamental Vue",
+	"version": "0.1.0",
+	"publisher": "Ran Hassid",
+	"engines": {
+		"vscode": "^1.44.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SAP/code-snippet",
+		"directory": "vscode-snippet-contrib"
+	},
+	"extensionDependencies": [
+		"saposs.code-snippet"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.showCodeSnippetContrib"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.showCodeSnippetContrib",
+				"title": "SAP graph pages for Vue"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.showCodeSnippetContrib",
+					"group": "navigation@1",
+					"when": "resourceFilename == launch.json"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js",
+		"package": "npx vsce package ."
+	},
+	"dependencies": {
+		"@sap-devx/code-snippet-types": "0.0.2",
+		"comment-json": "2.1.0",
+		"fs-extra": "7.0.1",
+		"lodash": "^4.17.15",
+		"shelljs": "^0.8.4"
+	},
+	"devDependencies": {
+		"@types/comment-json": "1.1.1",
+		"@types/fs-extra": "5.0.5",
+		"@types/glob": "^7.1.1",
+		"@types/lodash": "^4.14.150",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/shelljs": "^0.8.8",
+		"@types/vscode": "^1.40.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.9.7",
+		"vsce": "^1.69.0",
+		"vscode-test": "^1.2.2"
+	}
+}
