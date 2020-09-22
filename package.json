@@ -3,7 +3,7 @@
 	"displayName": "vscode-snippet-fiori-fundamental-vue",
 	"description": "VSCode snippet extension for apps developed with Fiori Fundamental Vue",
 	"version": "0.1.0",
-	"publisher": "Ran Hassid",
+	"publisher": "RAN",
 	"engines": {
 		"vscode": "^1.44.2"
 	},
@@ -19,20 +19,20 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.showCodeSnippetContrib"
+		"onCommand:extension.show-snippet-fiori-fundamental-vue"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.showCodeSnippetContrib",
+				"command": "extension.show-snippet-fiori-fundamental-vue",
 				"title": "SAP graph pages for Vue"
 			}
 		],
 		"menus": {
 			"explorer/context": [
 				{
-					"command": "extension.showCodeSnippetContrib",
+					"command": "extension.show-snippet-fiori-fundamental-vue",
 					"group": "navigation@1",
 					"when": "resourceFilename == launch.json"
 				}
@@ -48,7 +48,7 @@
 		"package": "npx vsce package ."
 	},
 	"dependencies": {
-		"@sap-devx/code-snippet-types": "0.0.2",
+		"@sap-devx/code-snippet-types": "0.0.5",
 		"comment-json": "2.1.0",
 		"fs-extra": "7.0.1",
 		"lodash": "^4.17.15",
